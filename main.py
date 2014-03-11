@@ -1,9 +1,8 @@
 #!/usr/bin/env python
-import flask
 
-app = flask.Flask(__name__)
+from app import app
 from views import all
 
 if __name__ == '__main__':
-    app.run()
+    app.run(threaded=True)
 
