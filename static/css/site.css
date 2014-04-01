@@ -38,13 +38,14 @@ a {
 }
 
 .nav li {
-    padding: 30px 0 0 0;
+    padding: 30px 35px 0 0;
+    display: block;
     float: left;
 }
 
 .nav a {
-    display: block;
-    padding: 0px 25px 0px 0px;
+    // display: block;
+    // padding: 0px 25px 0px 0px;
 }
 
 a:hover {

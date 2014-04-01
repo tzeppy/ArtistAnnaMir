@@ -1,4 +1,11 @@
 
+img {
+  border: 2px solid #000;
+} 
+
+img:hover {
+  border: 2px solid #888;
+}
 
 #cright {
     line-height: 125%;

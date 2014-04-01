@@ -14,27 +14,28 @@ seriesCountDict['landscapes'] = ('land', 14)
 seriesCountDict['poms'] = ('pom', 4)
 seriesCountDict['skyscrapers'] = ('sky', 2)
 seriesCountDict['textures'] = ('tex', 6)
+seriesCountDict['main'] = ('main', 9)
 
 @app.route("/")
 @app.route("/home")
 def home():
     return flask.render_template('home.html')
 
-@app.route("/bio")
-def bio():
-    return flask.render_template('bio.html')
+@app.route("/about_artist")
+def about_artist():
+    return flask.render_template('about_artist.html')
 
-@app.route("/exhibitions")
-def exhibitions():
-    return flask.render_template('exhibitions.html')
+@app.route("/statement_bio")
+def statement_bio():
+    return flask.render_template('statement_bio.html')
+
+@app.route("/resume")
+def resume():
+    return flask.render_template('resume.html')
 
 @app.route("/contact")
 def contact():
     return flask.render_template('contact.html')
-
-@app.route("/statement")
-def statement():
-    return flask.render_template('statement.html')
 
 @app.route("/portfolio")
 def portfolio():
