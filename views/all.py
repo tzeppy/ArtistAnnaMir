@@ -16,6 +16,9 @@ seriesCountDict['skyscrapers'] = ('sky', 2)
 seriesCountDict['textures'] = ('tex', 6)
 seriesCountDict['main'] = ('main', 9)
 
+seriesCountDict['light'] = ('light', 6)
+seriesCountDict['textures2'] = ('tex', 20)
+
 @app.route("/")
 @app.route("/home")
 def home():
@@ -40,6 +43,14 @@ def contact():
 @app.route("/portfolio")
 def portfolio():
     return flask.render_template('portfolio.html')
+
+@app.route("/portfolio/texture")
+def folio_textures():
+    global seriesCountDict
+    series = 'textures2'
+    pic_text =""
+    
+    return flask.render_template('folio_textures.html', series=series, pic_text=pic_text, bname=seriesCountDict[series][0], count=seriesCountDict[series][1])
 
 @app.route("/portfolio/<series>")
 def folio_series(series):
